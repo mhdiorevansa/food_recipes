@@ -5,11 +5,13 @@ class ButtonWidget extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
   final bool showIcon;
+  final bool isFullWidth;
   const ButtonWidget({
     super.key,
     required this.text,
     required this.onPressed,
     this.showIcon = false,
+    this.isFullWidth = false,
   });
 
   @override
@@ -17,6 +19,7 @@ class ButtonWidget extends StatelessWidget {
     return TextButton(
       onPressed: onPressed,
       style: TextButton.styleFrom(
+        minimumSize: isFullWidth ? Size.fromHeight(51) : null,
         backgroundColor: Color(0xFF129575),
         foregroundColor: Colors.white,
         padding: EdgeInsets.symmetric(horizontal: 35, vertical: 15),

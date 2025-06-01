@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:food_recipes/presentation/pages/sign_in_page.dart';
 import 'package:food_recipes/presentation/widgets/button_widget.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+class SplashScreenPage extends StatelessWidget {
+  const SplashScreenPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +56,11 @@ class SplashScreen extends StatelessWidget {
                   Gap(64),
                   ButtonWidget(
                     text: "Start Cooking",
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => SignInPage()),
+                      );
+                    },
                     showIcon: true,
                   ),
                 ],
