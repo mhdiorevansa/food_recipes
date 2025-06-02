@@ -29,9 +29,13 @@ class SignInPage extends StatelessWidget {
             ),
             Text('Welcome Back!', style: GoogleFonts.poppins(fontSize: 20)),
             Gap(57),
-            InputWidget(lable: "Email"),
+            InputWidget(lable: "Email", placeholder: "Enter Email"),
             Gap(30),
-            InputWidget(lable: "Enter Password", isPassword: true),
+            InputWidget(
+              lable: "Enter Password",
+              isPassword: true,
+              placeholder: "Enter Password",
+            ),
             Gap(20),
             Text(
               'Forgot Password?',

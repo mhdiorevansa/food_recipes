@@ -5,7 +5,13 @@ import 'package:google_fonts/google_fonts.dart';
 class InputWidget extends StatelessWidget {
   final String lable;
   final bool isPassword;
-  const InputWidget({super.key, required this.lable, this.isPassword = false});
+  final String placeholder;
+  const InputWidget({
+    super.key,
+    required this.lable,
+    this.isPassword = false,
+    required this.placeholder,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +24,7 @@ class InputWidget extends StatelessWidget {
           style: GoogleFonts.poppins(fontSize: 11, color: Color(0xFF129575)),
           obscureText: isPassword,
           decoration: InputDecoration(
-            hintText: 'Enter Email',
+            hintText: placeholder,
             hintStyle: TextStyle(color: Color(0xFFD9D9D9)),
             contentPadding: EdgeInsets.all(20),
             fillColor: Colors.white,
