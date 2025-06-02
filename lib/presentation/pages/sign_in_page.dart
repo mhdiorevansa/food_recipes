@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:food_recipes/presentation/pages/splash_screen_page.dart';
+import 'package:food_recipes/presentation/pages/home_page.dart';
+import 'package:food_recipes/presentation/pages/sign_up_page.dart';
 import 'package:food_recipes/presentation/widgets/button_widget.dart';
 import 'package:food_recipes/presentation/widgets/divider_auth_widget.dart';
 import 'package:food_recipes/presentation/widgets/input_widget.dart';
@@ -27,6 +28,7 @@ class SignInPage extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
             ),
+            Gap(5),
             Text('Welcome Back!', style: GoogleFonts.poppins(fontSize: 20)),
             Gap(57),
             InputWidget(lable: "Email", placeholder: "Enter Email"),
@@ -47,7 +49,11 @@ class SignInPage extends StatelessWidget {
             Gap(25),
             ButtonWidget(
               text: "Sign In",
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              },
               showIcon: true,
               isFullWidth: true,
             ),
@@ -86,7 +92,7 @@ class SignInPage extends StatelessWidget {
                         ..onTap = () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => SplashScreenPage(),
+                              builder: (context) => SignUpPage(),
                             ),
                           );
                         },
