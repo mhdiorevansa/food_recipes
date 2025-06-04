@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SearchInputWidget extends StatelessWidget {
-  const SearchInputWidget({super.key});
+  final Function(String)? onChanged;
+  const SearchInputWidget({super.key, this.onChanged});
 
   @override
   Widget build(BuildContext context) {
@@ -10,6 +11,7 @@ class SearchInputWidget extends StatelessWidget {
       width: 255,
       height: 40,
       child: TextField(
+        onChanged: onChanged,
         style: GoogleFonts.poppins(fontSize: 11, color: Color(0xFF129575)),
         decoration: InputDecoration(
           contentPadding: EdgeInsets.all(10),

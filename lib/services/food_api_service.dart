@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class FoodApiService {
-  static Future<List<Meal>> fetchSeafoodMeal() async {
+  static Future<List<dynamic>> fetchSeafoodMeal() async {
     final url = Uri.parse(
       'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood',
     );
@@ -16,7 +16,7 @@ class FoodApiService {
     }
   }
 
-  static Future<Meal> fecthDetailSeafoodMeal(String id) async {
+  static Future<dynamic> fetchDetailSeafoodMeal(String id) async {
     final url = Uri.parse(
       'https://www.themealdb.com/api/json/v1/1/lookup.php?i=$id',
     );

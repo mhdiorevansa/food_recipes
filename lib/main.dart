@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_recipes/presentation/pages/splash_screen_page.dart';
+import 'package:food_recipes/ui/pages/splash_screen_page.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_recipes/presentation/pages/sign_in_page.dart';
-import 'package:food_recipes/presentation/widgets/button_widget.dart';
+import 'package:food_recipes/ui/pages/sign_in_page.dart';
+import 'package:food_recipes/ui/widgets/button_widget.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 

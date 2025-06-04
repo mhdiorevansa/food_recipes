@@ -1,12 +1,12 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:food_recipes/presentation/pages/home_page.dart';
-import 'package:food_recipes/presentation/pages/sign_up_page.dart';
-import 'package:food_recipes/presentation/widgets/button_widget.dart';
-import 'package:food_recipes/presentation/widgets/divider_auth_widget.dart';
-import 'package:food_recipes/presentation/widgets/input_widget.dart';
-import 'package:food_recipes/presentation/widgets/page_widget.dart';
-import 'package:food_recipes/presentation/widgets/social_media_auth_widget.dart';
+import 'package:food_recipes/ui/pages/home_page.dart';
+import 'package:food_recipes/ui/pages/sign_up_page.dart';
+import 'package:food_recipes/ui/widgets/button_widget.dart';
+import 'package:food_recipes/ui/widgets/divider_auth_widget.dart';
+import 'package:food_recipes/ui/widgets/input_widget.dart';
+import 'package:food_recipes/ui/widgets/page_widget.dart';
+import 'package:food_recipes/ui/widgets/social_media_auth_widget.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 
