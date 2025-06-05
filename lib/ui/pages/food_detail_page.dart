@@ -136,7 +136,7 @@ class _FoodDetailPageState extends State<FoodDetailPage> {
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [IngredientWidget(id: detailMeal.id)],
+                    children: [IngredientWidget(meal: detailMeal)],
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

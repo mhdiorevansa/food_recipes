@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TabMenuWidget extends StatelessWidget {
   final int length;
@@ -19,7 +20,15 @@ class TabMenuWidget extends StatelessWidget {
         children: [
           TabBar(
             labelColor: Colors.white,
+            labelStyle: GoogleFonts.poppins(
+              fontSize: 12,
+              fontWeight: FontWeight.w600,
+            ),
             unselectedLabelColor: Colors.black,
+            unselectedLabelStyle: GoogleFonts.poppins(
+              fontSize: 12,
+              fontWeight: FontWeight.w600,
+            ),
             indicatorSize: TabBarIndicatorSize.tab,
             dividerColor: Colors.transparent,
             indicator: BoxDecoration(
@@ -29,7 +38,10 @@ class TabMenuWidget extends StatelessWidget {
             tabs: tabs,
           ),
           SizedBox(height: 33),
-          SizedBox(height: 300, child: TabBarView(children: children)),
+          SizedBox(
+            height: double.maxFinite,
+            child: TabBarView(children: children),
+          ),
         ],
       ),
     );
