@@ -14,7 +14,16 @@ class SplashScreenPage extends StatelessWidget {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          Image.asset('assets/images/splash_screen.png', fit: BoxFit.cover),
+          ColorFiltered(
+            colorFilter: ColorFilter.mode(
+              Colors.black.withOpacity(0.4),
+              BlendMode.darken,
+            ),
+            child: Image.asset(
+              'assets/images/splash_screen.jpg',
+              fit: BoxFit.cover,
+            ),
+          ),
           Center(
             child: Padding(
               padding: const EdgeInsets.only(top: 104, left: 83, right: 83),
