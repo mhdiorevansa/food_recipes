@@ -47,12 +47,6 @@ class SignUpPage extends StatelessWidget {
               isPassword: true,
             ),
             Gap(20),
-            InputWidget(
-              lable: 'Confirm Password',
-              placeholder: 'Retype Password',
-              isPassword: true,
-            ),
-            Gap(20),
             CheckboxWidget(),
             Gap(26),
             ButtonWidget(
