@@ -3,6 +3,7 @@ import 'package:food_recipes/models/meal.dart';
 import 'package:food_recipes/ui/pages/home_page.dart';
 import 'package:food_recipes/ui/widgets/ingredient_widget.dart';
 import 'package:food_recipes/ui/widgets/page_widget.dart';
+import 'package:food_recipes/ui/widgets/procedure_widget.dart';
 import 'package:food_recipes/ui/widgets/tab_menu_widget.dart';
 import 'package:food_recipes/services/food_api_service.dart';
 import 'package:gap/gap.dart';
@@ -52,11 +53,10 @@ class _FoodDetailPageState extends State<FoodDetailPage> {
       backgroundColor: Colors.white,
       body: PageWidget(
         child: SingleChildScrollView(
-          padding: EdgeInsets.only(top: 56),
+          padding: EdgeInsets.only(top: 56, bottom: 40),
           child: Column(
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
                     onTap: () {
@@ -70,7 +70,6 @@ class _FoodDetailPageState extends State<FoodDetailPage> {
                       size: 20,
                     ),
                   ),
-                  Icon(Icons.more_horiz, color: Colors.black, size: 20),
                 ],
               ),
               Gap(20),
@@ -140,7 +139,7 @@ class _FoodDetailPageState extends State<FoodDetailPage> {
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [Text('Reviews Page')],
+                    children: [ProcedureWidget(meal: detailMeal)],
                   ),
                 ],
               ),

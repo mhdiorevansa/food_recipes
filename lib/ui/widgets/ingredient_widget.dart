@@ -28,7 +28,7 @@ class IngredientWidget extends StatelessWidget {
               width: double.infinity,
               margin: EdgeInsets.only(
                 bottom: 10,
-              ), // opsional: beri jarak antar item
+              ),
               padding: EdgeInsets.symmetric(horizontal: 15, vertical: 27),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12),

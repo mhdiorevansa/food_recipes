@@ -27,7 +27,7 @@ class _FoodListWidgetState extends State<FoodListWidget> {
 
   Future<void> fetchMeals() async {
     try {
-      final meals = await FoodApiService.fetchSeafoodMeal();
+      final meals = await FoodApiService.fetchAllMeal();
       setState(() {
         allMeals = meals;
         filteredMeals = meals;
@@ -49,6 +49,18 @@ class _FoodListWidgetState extends State<FoodListWidget> {
     });
   }
 
+  void filterByCategory(Set<String> categories) {
+    setState(() {
+      if (categories.isEmpty) {
+        filteredMeals = allMeals;
+      } else {
+        filteredMeals = allMeals.where((meal) {
+          return categories.contains(meal.category);
+        }).toList();
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -58,7 +70,11 @@ class _FoodListWidgetState extends State<FoodListWidget> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SearchInputWidget(onChanged: onSearchChanged),
-            FilterButtonWidget(),
+            FilterButtonWidget(
+              onFilterApplied: (Set<String> selectedCategories) {
+                filterByCategory(selectedCategories);
+              },
+            ),
           ],
         ),
         Gap(20),

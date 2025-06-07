@@ -6,6 +6,7 @@ class Meal {
   final String? area;
   final List<String>? ingredients;
   final List<String>? measures;
+  final String? instructions;
 
   Meal({
     required this.name,
@@ -14,7 +15,8 @@ class Meal {
     this.category,
     this.area,
     this.ingredients,
-    this.measures
+    this.measures,
+    this.instructions
   });
 
   factory Meal.fromJson(Map<String, dynamic> json) {
@@ -38,7 +40,8 @@ class Meal {
       category: json['strCategory'],
       area: json['strArea'],
       ingredients: ingredients,
-      measures: measures
+      measures: measures,
+      instructions: json['strInstructions']
     );
   }
 }

@@ -39,8 +39,12 @@ class TabMenuWidget extends StatelessWidget {
           ),
           SizedBox(height: 33),
           SizedBox(
-            height: double.maxFinite,
-            child: TabBarView(children: children),
+            height: 340,
+            child: TabBarView(
+              children: children.map((child) {
+                return SingleChildScrollView(child: child);
+              }).toList(),
+            ),
           ),
         ],
       ),
